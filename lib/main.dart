@@ -10,17 +10,17 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  bool _isDarkMode = false; // Gece modunun aktif olup olmadığı.
+  bool _isDarkMode = false;
 
 ThemeData _lightTheme = ThemeData(
   brightness: Brightness.light,
   primaryColor: Colors.blue,
   scaffoldBackgroundColor: Colors.white,
   colorScheme: ColorScheme.light(
-    background: Colors.grey[200]!, // Açık gri vurgu
+    background: Colors.grey[200]!,
   ),
   textTheme: TextTheme(
-    bodyLarge: TextStyle(color: Colors.black), // Güncellenmiş parametre
+    bodyLarge: TextStyle(color: Colors.black),
   ),
   buttonTheme: ButtonThemeData(
     buttonColor: Colors.blue,
@@ -33,10 +33,10 @@ ThemeData _darkTheme = ThemeData(
   primaryColor: Colors.blue,
   scaffoldBackgroundColor: Colors.black,
   colorScheme: ColorScheme.dark(
-    background: Colors.grey[800]!, // Koyu gri vurgu
+    background: Colors.grey[800]!,
   ),
   textTheme: TextTheme(
-    bodyLarge: TextStyle(color: Colors.white), // Güncellenmiş parametre
+    bodyLarge: TextStyle(color: Colors.white),
   ),
   buttonTheme: ButtonThemeData(
     buttonColor: Colors.blueGrey,
@@ -47,15 +47,16 @@ ThemeData _darkTheme = ThemeData(
 
   void _toggleTheme() {
     setState(() {
-      _isDarkMode = !_isDarkMode; // Temayı değiştir
+      _isDarkMode = !_isDarkMode;
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,  
       title: 'Oyun Kütüphanesi',
-      theme: _isDarkMode ? _darkTheme : _lightTheme, // Aktif tema
+      theme: _isDarkMode ? _darkTheme : _lightTheme,
       home: HomeScreen(toggleTheme: _toggleTheme),
     );
   }
@@ -78,14 +79,14 @@ class _HomeScreenState extends State<HomeScreen> {
     {'name': 'Call of Duty', 'genre': 'Shooter', 'rating': 8.3},
   ];
 
-  List<String> favoriteGames = []; // Favori oyunlar
+  List<String> favoriteGames = []; 
 
   void _toggleFavorite(String gameName) {
     setState(() {
       if (favoriteGames.contains(gameName)) {
-        favoriteGames.remove(gameName); // Favoriden çıkar
+        favoriteGames.remove(gameName);
       } else {
-        favoriteGames.add(gameName); // Favoriye ekle
+        favoriteGames.add(gameName); 
       }
     });
   }
@@ -99,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
           IconButton(
             icon: Icon(Icons.brightness_6),
             onPressed: () {
-              widget.toggleTheme(); // Temayı değiştir
+              widget.toggleTheme();
             },
           ),
         ],
