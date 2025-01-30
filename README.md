@@ -154,12 +154,12 @@ lib/
 
 ## Ekran Görüntüleri
 
-![](assets/images/homess.jpg)
-![](assets/images/homess2.jpg)
-![](assets/images/oyunlarss.jpg)
-![](assets/images/haberss.jpg)
-![](assets/images/gotyss.jpg)
-![](assets/images/loadingss.jpg)
+![](assets/images/homess.png)
+![](assets/images/homess2.png)
+![](assets/images/oyunlarss.png)
+![](assets/images/haberss.png)
+![](assets/images/gotyss.png)
+![](assets/images/loadingss.png)
 
 
 
